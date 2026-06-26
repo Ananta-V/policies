@@ -1,585 +1,1206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ziel — Legal & Privacy</title>
-<meta name="description" content="Privacy Policy and Terms of Service for Ziel: No Excuse System. A local-first habit and discipline tracking app.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ziel — Legal & Privacy</title>
+  <meta name="description"
+    content="Privacy Policy and Terms of Service for Ziel: No Excuse System. A local-first habit and discipline tracking app.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
 
-:root{
-  --white:#ffffff;
-  --off:#f5f6f8;
-  --border:#e4e7ec;
-  --blue:#1a6bfa;
-  --blue-light:#eef3ff;
-  --blue-mid:#c7d9ff;
-  --text:#0f1117;
-  --muted:#6b7280;
-  --muted2:#9ca3af;
-  --green:#16a34a;
-  --red:#dc2626;
-  --radius:10px;
-}
+    :root {
+      --white: #ffffff;
+      --off: #f5f6f8;
+      --border: #e4e7ec;
+      --blue: #1a6bfa;
+      --blue-light: #eef3ff;
+      --blue-mid: #c7d9ff;
+      --text: #0f1117;
+      --muted: #6b7280;
+      --muted2: #9ca3af;
+      --green: #16a34a;
+      --red: #dc2626;
+      --radius: 10px;
+    }
 
-html{scroll-behavior:smooth}
+    html {
+      scroll-behavior: smooth
+    }
 
-body{
-  background:var(--off);
-  color:var(--text);
-  font-family:'Sora',sans-serif;
-  font-weight:300;
-  line-height:1.7;
-  min-height:100vh;
-}
+    body {
+      background: var(--off);
+      color: var(--text);
+      font-family: 'Sora', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
 
-/* ── Sidebar ── */
-.sidebar{
-  position:fixed;top:0;left:0;
-  width:248px;height:100vh;
-  background:var(--white);
-  border-right:1px solid var(--border);
-  display:flex;flex-direction:column;
-  overflow:hidden;
-  z-index:100;
-}
-.sidebar-top{padding:28px 24px 24px;border-bottom:1px solid var(--border);}
-.brand{display:flex;align-items:center;gap:12px;}
-.brand-icon{width:40px;height:40px;border-radius:10px;overflow:hidden;flex-shrink:0;background:#000;}
-.brand-icon img{width:100%;height:100%;object-fit:cover;display:block;}
-.brand-name{font-size:17px;font-weight:600;color:var(--text);letter-spacing:-0.01em;display:block;}
-.brand-sub{font-size:11px;color:var(--muted2);letter-spacing:0.06em;text-transform:uppercase;display:block;margin-top:1px;}
+    /* ── Sidebar ── */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 248px;
+      height: 100vh;
+      background: var(--white);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 100;
+    }
 
-.sidebar-nav{flex:1;padding:16px 0;overflow-y:auto;}
-.nav-section-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted2);font-weight:500;padding:12px 24px 6px;display:block;}
-.nav-link{display:flex;align-items:center;gap:10px;padding:9px 24px;color:var(--muted);text-decoration:none;font-size:13.5px;font-weight:400;transition:color .15s,background .15s;border-left:2px solid transparent;}
-.nav-link:hover{color:var(--blue);background:var(--blue-light);}
-.nav-link.active{color:var(--blue);background:var(--blue-light);border-left-color:var(--blue);font-weight:500;}
-.nav-link svg{opacity:.5;flex-shrink:0;}
-.nav-link:hover svg,.nav-link.active svg{opacity:1;color:var(--blue);}
+    .sidebar-top {
+      padding: 28px 24px 24px;
+      border-bottom: 1px solid var(--border);
+    }
 
-.sidebar-footer{padding:16px 24px;border-top:1px solid var(--border);font-size:11.5px;color:var(--muted2);line-height:1.6;}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-/* ── Main ── */
-.main{margin-left:248px;padding:48px 60px 96px;max-width:900px;}
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #000;
+    }
 
-/* ── Page header ── */
-.page-header{margin-bottom:48px;animation:fadeUp .5s ease both;}
-.header-inner{display:flex;align-items:center;gap:16px;margin-bottom:12px;}
-.header-icon-wrap{width:52px;height:52px;border-radius:14px;overflow:hidden;background:#000;flex-shrink:0;}
-.header-icon-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
-.page-title{font-size:28px;font-weight:600;color:var(--text);letter-spacing:-0.02em;line-height:1.2;}
-.page-desc{font-size:14.5px;color:var(--muted);max-width:520px;line-height:1.75;margin-top:6px;}
-.eff-pill{display:inline-flex;align-items:center;gap:6px;background:var(--blue-light);color:var(--blue);font-size:11.5px;font-weight:500;padding:4px 10px;border-radius:6px;margin-top:12px;}
+    .brand-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-/* ── Summary bar ── */
-.summary-bar{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:40px;background:var(--white);}
-.sum-cell{padding:16px 18px;border-right:1px solid var(--border);}
-.sum-cell:last-child{border-right:none;}
-.sum-label{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted2);font-weight:500;margin-bottom:4px;}
-.sum-val{font-size:13.5px;font-weight:600;color:var(--text);}
-.sum-val.no{color:var(--red);}
-.sum-val.yes{color:var(--green);}
-.sum-val.warn{color:#d97706;}
+    .brand-name {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      display: block;
+    }
 
-/* ── Sections ── */
-.doc-section{margin-bottom:64px;animation:fadeUp .5s ease both;}
-.doc-section:nth-child(2){animation-delay:.05s}
-.doc-section:nth-child(3){animation-delay:.1s}
-.doc-section:nth-child(4){animation-delay:.15s}
-.doc-section:nth-child(5){animation-delay:.2s}
-.doc-section:nth-child(6){animation-delay:.25s}
+    .brand-sub {
+      font-size: 11px;
+      color: var(--muted2);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 1px;
+    }
 
-.section-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
-.section-icon{width:34px;height:34px;border-radius:8px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;color:var(--blue);flex-shrink:0;}
-.section-title{font-size:18px;font-weight:600;color:var(--text);letter-spacing:-0.01em;}
+    .sidebar-nav {
+      flex: 1;
+      padding: 16px 0;
+      overflow-y: auto;
+    }
 
-/* ── Cards ── */
-.block-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;margin-bottom:12px;transition:border-color .15s;}
-.block-card:hover{border-color:var(--blue-mid);}
-.block-card h4{font-size:13px;font-weight:600;color:var(--text);margin-bottom:8px;}
-.block-card p{font-size:13.5px;color:var(--muted);line-height:1.75;margin-top:8px;}
-.block-card p:first-of-type{margin-top:0;}
-.block-card strong{color:var(--text);font-weight:500;}
+    .nav-section-label {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted2);
+      font-weight: 500;
+      padding: 12px 24px 6px;
+      display: block;
+    }
 
-.card-list{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:12px;}
-.card-list-item{display:flex;align-items:flex-start;gap:14px;padding:14px 20px;border-bottom:1px solid var(--border);transition:background .12s;}
-.card-list-item:last-child{border-bottom:none;}
-.card-list-item:hover{background:var(--off);}
-.dot{width:5px;height:5px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:9px;}
-.card-list-item p{font-size:13.5px;color:var(--text);line-height:1.65;}
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 24px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 400;
+      transition: color .15s, background .15s;
+      border-left: 2px solid transparent;
+    }
 
-/* ── Notice ── */
-.notice{background:var(--blue-light);border:1px solid var(--blue-mid);border-radius:var(--radius);padding:14px 18px;display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;}
-.notice svg{color:var(--blue);flex-shrink:0;margin-top:2px;}
-.notice p{font-size:13px;color:var(--blue);line-height:1.65;}
+    .nav-link:hover {
+      color: var(--blue);
+      background: var(--blue-light);
+    }
 
-.notice-warn{background:#fffbeb;border:1px solid #fde68a;border-radius:var(--radius);padding:14px 18px;display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;}
-.notice-warn svg{color:#d97706;flex-shrink:0;margin-top:2px;}
-.notice-warn p{font-size:13px;color:#92400e;line-height:1.65;}
+    .nav-link.active {
+      color: var(--blue);
+      background: var(--blue-light);
+      border-left-color: var(--blue);
+      font-weight: 500;
+    }
 
-/* ── Two-col ── */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
-.info-tile{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;transition:border-color .15s;}
-.info-tile:hover{border-color:var(--blue-mid);}
-.tile-label{font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);font-weight:600;margin-bottom:6px;display:block;}
-.tile-val{font-size:13.5px;color:var(--text);line-height:1.6;}
+    .nav-link svg {
+      opacity: .5;
+      flex-shrink: 0;
+    }
 
-/* ── Permission table ── */
-.perm-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:12px;}
-.perm-table th{text-align:left;font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted2);font-weight:500;padding:12px 18px;border-bottom:1px solid var(--border);background:var(--off);}
-.perm-table td{padding:14px 18px;font-size:13.5px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--muted);line-height:1.6;}
-.perm-table tr:last-child td{border-bottom:none;}
-.perm-table tr:hover td{background:var(--off);}
-.perm-table .pname{color:var(--text);font-weight:500;white-space:nowrap;min-width:160px;}
-.ptag{display:inline-block;background:var(--blue-light);color:var(--blue);font-family:'IBM Plex Mono',monospace;font-size:9.5px;padding:1px 6px;border-radius:4px;font-weight:500;margin-left:4px;letter-spacing:.04em;vertical-align:middle;}
-.ptag-warn{background:#fffbeb;color:#92400e;}
+    .nav-link:hover svg,
+    .nav-link.active svg {
+      opacity: 1;
+      color: var(--blue);
+    }
 
-code{font-family:'IBM Plex Mono',monospace;font-size:12px;background:var(--off);padding:1px 5px;border-radius:4px;color:var(--blue);}
+    .sidebar-footer {
+      padding: 16px 24px;
+      border-top: 1px solid var(--border);
+      font-size: 11.5px;
+      color: var(--muted2);
+      line-height: 1.6;
+    }
 
-/* ── Contact ── */
-.contact-email{display:inline-flex;align-items:center;gap:8px;margin-top:10px;color:var(--blue);font-size:14px;font-weight:500;text-decoration:none;padding:8px 14px;background:var(--blue-light);border:1px solid var(--blue-mid);border-radius:7px;transition:background .15s,border-color .15s;font-family:'IBM Plex Mono',monospace;}
-.contact-email:hover{background:var(--blue-mid);border-color:var(--blue);}
+    /* ── Main ── */
+    .main {
+      margin-left: 248px;
+      padding: 48px 60px 96px;
+      max-width: 900px;
+    }
 
-/* ── Badges ── */
-.badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
-.badge{display:inline-flex;align-items:center;gap:6px;background:var(--white);border:1px solid var(--border);border-radius:6px;padding:6px 12px;font-size:12.5px;color:var(--muted);}
-.badge svg{color:var(--blue);}
+    /* ── Page header ── */
+    .page-header {
+      margin-bottom: 48px;
+      animation: fadeUp .5s ease both;
+    }
 
-/* ── Divider ── */
-.divider{height:1px;background:var(--border);margin:48px 0;}
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
 
-/* ── Animation ── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    .header-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #000;
+      flex-shrink: 0;
+    }
 
-/* ── Responsive ── */
-@media(max-width:860px){
-  .sidebar{display:none}
-  .main{margin-left:0;padding:32px 20px 80px}
-  .two-col{grid-template-columns:1fr}
-  .summary-bar{grid-template-columns:1fr 1fr}
-  .perm-table{display:block;overflow-x:auto;}
-}
-</style>
+    .header-icon-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .page-title {
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .page-desc {
+      font-size: 14.5px;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.75;
+      margin-top: 6px;
+    }
+
+    .eff-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: 11.5px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-top: 12px;
+    }
+
+    /* ── Summary bar ── */
+    .summary-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 40px;
+      background: var(--white);
+    }
+
+    .sum-cell {
+      padding: 16px 18px;
+      border-right: 1px solid var(--border);
+    }
+
+    .sum-cell:last-child {
+      border-right: none;
+    }
+
+    .sum-label {
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted2);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .sum-val {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .sum-val.no {
+      color: var(--red);
+    }
+
+    .sum-val.yes {
+      color: var(--green);
+    }
+
+    .sum-val.warn {
+      color: #d97706;
+    }
+
+    /* ── Sections ── */
+    .doc-section {
+      margin-bottom: 64px;
+      animation: fadeUp .5s ease both;
+    }
+
+    .doc-section:nth-child(2) {
+      animation-delay: .05s
+    }
+
+    .doc-section:nth-child(3) {
+      animation-delay: .1s
+    }
+
+    .doc-section:nth-child(4) {
+      animation-delay: .15s
+    }
+
+    .doc-section:nth-child(5) {
+      animation-delay: .2s
+    }
+
+    .doc-section:nth-child(6) {
+      animation-delay: .25s
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .section-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+
+    /* ── Cards ── */
+    .block-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin-bottom: 12px;
+      transition: border-color .15s;
+    }
+
+    .block-card:hover {
+      border-color: var(--blue-mid);
+    }
+
+    .block-card h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .block-card p {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-top: 8px;
+    }
+
+    .block-card p:first-of-type {
+      margin-top: 0;
+    }
+
+    .block-card strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .card-list {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .card-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      transition: background .12s;
+    }
+
+    .card-list-item:last-child {
+      border-bottom: none;
+    }
+
+    .card-list-item:hover {
+      background: var(--off);
+    }
+
+    .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--blue);
+      flex-shrink: 0;
+      margin-top: 9px;
+    }
+
+    .card-list-item p {
+      font-size: 13.5px;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    /* ── Notice ── */
+    .notice {
+      background: var(--blue-light);
+      border: 1px solid var(--blue-mid);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .notice svg {
+      color: var(--blue);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .notice p {
+      font-size: 13px;
+      color: var(--blue);
+      line-height: 1.65;
+    }
+
+    .notice-warn {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .notice-warn svg {
+      color: #d97706;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .notice-warn p {
+      font-size: 13px;
+      color: #92400e;
+      line-height: 1.65;
+    }
+
+    /* ── Two-col ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .info-tile {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      transition: border-color .15s;
+    }
+
+    .info-tile:hover {
+      border-color: var(--blue-mid);
+    }
+
+    .tile-label {
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .tile-val {
+      font-size: 13.5px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── Permission table ── */
+    .perm-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+
+    .perm-table th {
+      text-align: left;
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted2);
+      font-weight: 500;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border);
+      background: var(--off);
+    }
+
+    .perm-table td {
+      padding: 14px 18px;
+      font-size: 13.5px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .perm-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .perm-table tr:hover td {
+      background: var(--off);
+    }
+
+    .perm-table .pname {
+      color: var(--text);
+      font-weight: 500;
+      white-space: nowrap;
+      min-width: 160px;
+    }
+
+    .ptag {
+      display: inline-block;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9.5px;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-weight: 500;
+      margin-left: 4px;
+      letter-spacing: .04em;
+      vertical-align: middle;
+    }
+
+    .ptag-warn {
+      background: #fffbeb;
+      color: #92400e;
+    }
+
+    code {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      background: var(--off);
+      padding: 1px 5px;
+      border-radius: 4px;
+      color: var(--blue);
+    }
+
+    /* ── Contact ── */
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 8px 14px;
+      background: var(--blue-light);
+      border: 1px solid var(--blue-mid);
+      border-radius: 7px;
+      transition: background .15s, border-color .15s;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+
+    .contact-email:hover {
+      background: var(--blue-mid);
+      border-color: var(--blue);
+    }
+
+    /* ── Badges ── */
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+
+    .badge svg {
+      color: var(--blue);
+    }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 48px 0;
+    }
+
+    /* ── Animation ── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    /* ── Responsive ── */
+    @media(max-width:860px) {
+      .sidebar {
+        display: none
+      }
+
+      .main {
+        margin-left: 0;
+        padding: 32px 20px 80px
+      }
+
+      .two-col {
+        grid-template-columns: 1fr
+      }
+
+      .summary-bar {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .perm-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Sidebar -->
-<aside class="sidebar">
-  <div class="sidebar-top">
-    <div class="brand">
-      <div class="brand-icon">
-        <img src="https://raw.githubusercontent.com/ananta-v/policies/main/icon.png" alt="Ziel icon" onerror="this.style.display='none'">
-      </div>
-      <div>
-        <span class="brand-name">Ziel</span>
-        <span class="brand-sub">Policies</span>
-      </div>
-    </div>
-  </div>
-  <nav class="sidebar-nav">
-    <span class="nav-section-label">Contents</span>
-    <a class="nav-link active" href="#privacy">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Privacy Policy
-    </a>
-    <a class="nav-link" href="#data-safety">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
-      Data Safety
-    </a>
-    <a class="nav-link" href="#permissions">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-      Permissions
-    </a>
-    <a class="nav-link" href="#app-access">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
-      App Access
-    </a>
-    <a class="nav-link" href="#terms">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-      Terms of Service
-    </a>
-    <a class="nav-link" href="#contact">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      Contact
-    </a>
-  </nav>
-  <div class="sidebar-footer">
-    Effective May 3, 2026<br>
-    App version 1.0.1<br>
-    com.nk2systems.ziel
-  </div>
-</aside>
-
-<!-- Main -->
-<main class="main">
-
-  <!-- Header -->
-  <header class="page-header">
-    <div class="header-inner">
-      <div class="header-icon-wrap">
-        <img src="https://raw.githubusercontent.com/ananta-v/policies/main/icon.png" alt="Ziel icon" onerror="this.style.display='none'">
-      </div>
-      <div>
-        <h1 class="page-title">Ziel — Legal &amp; Privacy</h1>
-        <p class="page-desc">Everything about how Ziel handles your data, what device permissions are used, and how app access works.</p>
-        <span class="eff-pill">
-          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          Effective May 3, 2026
-        </span>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="brand">
+        <div class="brand-icon">
+          <img src="https://raw.githubusercontent.com/ananta-v/policies/main/icon.png" alt="Ziel icon"
+            onerror="this.style.display='none'">
+        </div>
+        <div>
+          <span class="brand-name">Ziel</span>
+          <span class="brand-sub">Policies</span>
+        </div>
       </div>
     </div>
-  </header>
+    <nav class="sidebar-nav">
+      <span class="nav-section-label">Contents</span>
+      <a class="nav-link active" href="#privacy">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+        Privacy Policy
+      </a>
+      <a class="nav-link" href="#data-safety">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <ellipse cx="12" cy="5" rx="9" ry="3" />
+          <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
+          <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3" />
+        </svg>
+        Data Safety
+      </a>
+      <a class="nav-link" href="#permissions">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <rect x="3" y="11" width="18" height="11" rx="2" />
+          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+        </svg>
+        Permissions
+      </a>
+      <a class="nav-link" href="#app-access">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M6 20v-2a6 6 0 0 1 12 0v2" />
+        </svg>
+        App Access
+      </a>
+      <a class="nav-link" href="#terms">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <line x1="16" y1="13" x2="8" y2="13" />
+          <line x1="16" y1="17" x2="8" y2="17" />
+        </svg>
+        Terms of Service
+      </a>
+      <a class="nav-link" href="#contact">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+        Contact
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      Effective May 3, 2026<br>
+      App version 1.0.1<br>
+      com.nk2systems.ziel
+    </div>
+  </aside>
 
-  <!-- At-a-glance -->
-  <div class="summary-bar">
-    <div class="sum-cell">
-      <div class="sum-label">Storage</div>
-      <div class="sum-val yes">Device only</div>
-    </div>
-    <div class="sum-cell">
-      <div class="sum-label">Cloud sync</div>
-      <div class="sum-val no">None</div>
-    </div>
-    <div class="sum-cell">
-      <div class="sum-label">3rd-party sharing</div>
-      <div class="sum-val no">None</div>
-    </div>
-    <div class="sum-cell">
-      <div class="sum-label">Tracking &amp; ads</div>
-      <div class="sum-val no">None</div>
-    </div>
-  </div>
+  <!-- Main -->
+  <main class="main">
 
-  <!-- ═══════════════════════════════════════════════════════
+    <!-- Header -->
+    <header class="page-header">
+      <div class="header-inner">
+        <div class="header-icon-wrap">
+          <img src="https://raw.githubusercontent.com/ananta-v/policies/main/icon.png" alt="Ziel icon"
+            onerror="this.style.display='none'">
+        </div>
+        <div>
+          <h1 class="page-title">Ziel — Legal &amp; Privacy</h1>
+          <p class="page-desc">Everything about how Ziel handles your data, what device permissions are used, and how
+            app access works.</p>
+          <span class="eff-pill">
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+            Effective May 3, 2026
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- At-a-glance -->
+    <div class="summary-bar">
+      <div class="sum-cell">
+        <div class="sum-label">Storage</div>
+        <div class="sum-val yes">Device only</div>
+      </div>
+      <div class="sum-cell">
+        <div class="sum-label">Cloud sync</div>
+        <div class="sum-val no">None</div>
+      </div>
+      <div class="sum-cell">
+        <div class="sum-label">3rd-party sharing</div>
+        <div class="sum-val no">None</div>
+      </div>
+      <div class="sum-cell">
+        <div class="sum-label">Tracking &amp; ads</div>
+        <div class="sum-val no">None</div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
        PRIVACY POLICY
        ═══════════════════════════════════════════════════════ -->
-  <section id="privacy" class="doc-section">
-    <div class="section-header">
-      <div class="section-icon">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    <section id="privacy" class="doc-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+        </div>
+        <h2 class="section-title">Privacy Policy</h2>
       </div>
-      <h2 class="section-title">Privacy Policy</h2>
-    </div>
 
-    <div class="block-card">
-      <h4>Local-First Architecture</h4>
-      <p><strong>Ziel: No Excuse System</strong> is a local-first application. <strong>We do not collect, store, or sell your personal data, habit entries, or usage statistics.</strong> All of your habit data is saved securely and locally on your own device's storage using SQLite and on-device secure storage. We do not operate any servers that receive or read your habit data.</p>
-    </div>
+      <div class="block-card">
+        <h4>Local-First Architecture</h4>
+        <p><strong>Ziel: No Excuse System</strong> is a local-first application. <strong>We do not collect, store, or
+            sell your personal data, habit entries, or usage statistics.</strong> All of your habit data is saved
+          securely and locally on your own device's storage using SQLite and on-device secure storage. We do not operate
+          any servers that receive or read your habit data.</p>
+      </div>
 
-    <div class="block-card">
-      <h4>Data We Store On Your Device</h4>
-      <p>The following data is created by you and stored <em>only</em> on your device:</p>
-      <p>• Tasks, habits, journal entries, health logs, schedules, and reminders you create.<br>
-         • Profile information you provide — name, age, mission statement, and an optional profile photo.<br>
-         • App settings and preferences.<br>
-         • PIN lock hash (stored in secure storage — never transmitted).<br>
-         • Premium entitlement cache from RevenueCat (stored locally by the SDK).</p>
-    </div>
+      <div class="block-card">
+        <h4>Data We Store On Your Device</h4>
+        <p>The following data is created by you and stored <em>only</em> on your device:</p>
+        <p>• Tasks, habits, journal entries, health logs, schedules, and reminders you create.<br>
+          • Profile information you provide — name, age, mission statement, and an optional profile photo.<br>
+          • App settings and preferences.<br>
+          • PIN lock hash (stored in secure storage — never transmitted).<br>
+          • Premium entitlement cache from RevenueCat (stored locally by the SDK).</p>
+      </div>
 
-    <div class="block-card">
-      <h4>Third-Party Services for Payment</h4>
-      <p>To process premium subscriptions and one-time lifetime purchases, we use <strong>RevenueCat</strong> and <strong>Google Play Billing</strong>. When you make or restore a purchase, these services may collect:</p>
-      <p>• An anonymous RevenueCat user identifier (randomly generated, not tied to your name or email).<br>
-         • Your Google Play purchase token, used solely to validate your entitlement.<br>
-         • Device information required by the Google Play SDK for fraud prevention.</p>
-      <p>These services <strong>do not</strong> have access to your habit data, journal entries, profile photo, or any other content you create inside the app. Their data collection is strictly limited to what is necessary for payment processing.</p>
-      <p>• RevenueCat Privacy Policy: <a href="https://www.revenuecat.com/privacy" style="color:var(--blue)">revenuecat.com/privacy</a><br>
-         • Google Play Privacy Policy: <a href="https://policies.google.com/privacy" style="color:var(--blue)">policies.google.com/privacy</a></p>
-    </div>
+      <div class="block-card">
+        <h4>Third-Party Services for Payment</h4>
+        <p>To process premium subscriptions and one-time lifetime purchases, we use <strong>RevenueCat</strong> and
+          <strong>Google Play Billing</strong>. When you make or restore a purchase, these services may collect:
+        </p>
+        <p>• An anonymous RevenueCat user identifier (randomly generated, not tied to your name or email).<br>
+          • Your Google Play purchase token, used solely to validate your entitlement.<br>
+          • Device information required by the Google Play SDK for fraud prevention.</p>
+        <p>These services <strong>do not</strong> have access to your habit data, journal entries, profile photo, or any
+          other content you create inside the app. Their data collection is strictly limited to what is necessary for
+          payment processing.</p>
+        <p>• RevenueCat Privacy Policy: <a href="https://www.revenuecat.com/privacy"
+            style="color:var(--blue)">revenuecat.com/privacy</a><br>
+          • Google Play Privacy Policy: <a href="https://policies.google.com/privacy"
+            style="color:var(--blue)">policies.google.com/privacy</a></p>
+      </div>
 
-    <div class="block-card">
-      <h4>User-Controlled Exports</h4>
-      <p>When you choose to export a report or share a PDF or image, the data is sent only to the destination you explicitly choose (e.g. your own gallery, a messaging app). No automatic uploads occur. Ziel does not upload your exports to any server.</p>
-    </div>
+      <div class="block-card">
+        <h4>User-Controlled Exports</h4>
+        <p>When you choose to export a report or share a PDF or image, the data is sent only to the destination you
+          explicitly choose (e.g. your own gallery, a messaging app). No automatic uploads occur. Ziel does not upload
+          your exports to any server.</p>
+      </div>
 
-    <div class="block-card">
-      <h4>No Analytics or Advertising</h4>
-      <p>Ziel does not contain analytics SDKs, crash-reporting services, advertising networks, or any tracking libraries. We do not collect usage data such as which screens you visit or how often you open the app.</p>
-    </div>
+      <div class="block-card">
+        <h4>No Analytics or Advertising</h4>
+        <p>Ziel does not contain analytics SDKs, crash-reporting services, advertising networks, or any tracking
+          libraries. We do not collect usage data such as which screens you visit or how often you open the app.</p>
+      </div>
 
-    <div class="block-card">
-      <h4>Children's Privacy</h4>
-      <p>Ziel is not directed at children under 13. We do not knowingly collect any information from children. Because all data remains on-device, there is no mechanism for us to receive data from any user.</p>
-    </div>
+      <div class="block-card">
+        <h4>Children's Privacy</h4>
+        <p>Ziel is not directed at children under 13. We do not knowingly collect any information from children. Because
+          all data remains on-device, there is no mechanism for us to receive data from any user.</p>
+      </div>
 
-    <div class="block-card">
-      <h4>Changes to This Policy</h4>
-      <p>If we make material changes to this policy, we will update the effective date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
-    </div>
-  </section>
+      <div class="block-card">
+        <h4>Changes to This Policy</h4>
+        <p>If we make material changes to this policy, we will update the effective date at the top of this page.
+          Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+      </div>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════
        DATA SAFETY
        ═══════════════════════════════════════════════════════ -->
-  <section id="data-safety" class="doc-section">
-    <div class="section-header">
-      <div class="section-icon">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+    <section id="data-safety" class="doc-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <ellipse cx="12" cy="5" rx="9" ry="3" />
+            <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
+            <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3" />
+          </svg>
+        </div>
+        <h2 class="section-title">Data Safety</h2>
       </div>
-      <h2 class="section-title">Data Safety</h2>
-    </div>
 
-    <div class="two-col">
-      <div class="info-tile">
-        <span class="tile-label">User Input</span>
-        <div class="tile-val">Tasks, journal entries, habits, health logs, schedules, and reminders.</div>
+      <div class="two-col">
+        <div class="info-tile">
+          <span class="tile-label">User Input</span>
+          <div class="tile-val">Tasks, journal entries, habits, health logs, schedules, and reminders.</div>
+        </div>
+        <div class="info-tile">
+          <span class="tile-label">Profile Info</span>
+          <div class="tile-val">Name, age, mission statement, and optional profile photo.</div>
+        </div>
+        <div class="info-tile">
+          <span class="tile-label">Premium Data</span>
+          <div class="tile-val">Anonymous RevenueCat user ID and Google Play purchase token — for entitlement
+            verification only.</div>
+        </div>
+        <div class="info-tile">
+          <span class="tile-label">Storage Location</span>
+          <div class="tile-val">On-device SQLite database + secure on-device storage. No cloud sync of user content.
+          </div>
+        </div>
       </div>
-      <div class="info-tile">
-        <span class="tile-label">Profile Info</span>
-        <div class="tile-val">Name, age, mission statement, and optional profile photo.</div>
-      </div>
-      <div class="info-tile">
-        <span class="tile-label">Premium Data</span>
-        <div class="tile-val">Anonymous RevenueCat user ID and Google Play purchase token — for entitlement verification only.</div>
-      </div>
-      <div class="info-tile">
-        <span class="tile-label">Storage Location</span>
-        <div class="tile-val">On-device SQLite database + secure on-device storage. No cloud sync of user content.</div>
-      </div>
-    </div>
 
-    <div class="card-list">
-      <div class="card-list-item">
-        <div class="dot"></div>
-        <p>Data is stored locally on your device. <strong>No cloud sync of user content.</strong></p>
+      <div class="card-list">
+        <div class="card-list-item">
+          <div class="dot"></div>
+          <p>Data is stored locally on your device. <strong>No cloud sync of user content.</strong></p>
+        </div>
+        <div class="card-list-item">
+          <div class="dot"></div>
+          <p>Sensitive items (PIN hash, entitlement proofs) are kept in secure on-device storage.</p>
+        </div>
+        <div class="card-list-item">
+          <div class="dot"></div>
+          <p>Data is <strong>not shared or sold</strong> to any third party for marketing, analytics, or advertising.
+          </p>
+        </div>
+        <div class="card-list-item">
+          <div class="dot"></div>
+          <p>Limited data sharing occurs <strong>only for premium payment verification</strong> — an anonymous
+            RevenueCat ID and Google Play purchase token are sent to RevenueCat and Google Play solely to validate your
+            subscription or purchase.</p>
+        </div>
+        <div class="card-list-item">
+          <div class="dot"></div>
+          <p>The app does <strong>not</strong> use tracking, analytics SDKs, crash reporting services, or advertising of
+            any kind.</p>
+        </div>
+        <div class="card-list-item">
+          <div class="dot"></div>
+          <p>Reports can be saved or shared as PDF or image <strong>only when you choose</strong> to export them. No
+            automatic uploads.</p>
+        </div>
       </div>
-      <div class="card-list-item">
-        <div class="dot"></div>
-        <p>Sensitive items (PIN hash, entitlement proofs) are kept in secure on-device storage.</p>
-      </div>
-      <div class="card-list-item">
-        <div class="dot"></div>
-        <p>Data is <strong>not shared or sold</strong> to any third party for marketing, analytics, or advertising.</p>
-      </div>
-      <div class="card-list-item">
-        <div class="dot"></div>
-        <p>Limited data sharing occurs <strong>only for premium payment verification</strong> — an anonymous RevenueCat ID and Google Play purchase token are sent to RevenueCat and Google Play solely to validate your subscription or purchase.</p>
-      </div>
-      <div class="card-list-item">
-        <div class="dot"></div>
-        <p>The app does <strong>not</strong> use tracking, analytics SDKs, crash reporting services, or advertising of any kind.</p>
-      </div>
-      <div class="card-list-item">
-        <div class="dot"></div>
-        <p>Reports can be saved or shared as PDF or image <strong>only when you choose</strong> to export them. No automatic uploads.</p>
-      </div>
-    </div>
 
-    <div class="notice">
-      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-      <p>Because Ziel is local-first, if you uninstall the app or clear its data, your habit data will be permanently lost. We cannot recover it for you. Consider using the export feature to keep a backup.</p>
-    </div>
-  </section>
+      <div class="notice">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 8v4M12 16h.01" />
+        </svg>
+        <p>Because Ziel is local-first, if you uninstall the app or clear its data, your habit data will be permanently
+          lost. We cannot recover it for you. Consider using the export feature to keep a backup.</p>
+      </div>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════
        PERMISSIONS
        ═══════════════════════════════════════════════════════ -->
-  <section id="permissions" class="doc-section">
-    <div class="section-header">
-      <div class="section-icon">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    <section id="permissions" class="doc-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="11" width="18" height="11" rx="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+          </svg>
+        </div>
+        <h2 class="section-title">Permissions</h2>
       </div>
-      <h2 class="section-title">Permissions</h2>
-    </div>
 
-    <table class="perm-table">
-      <thead>
-        <tr>
-          <th>Permission</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="pname">Photos &amp; Media<span class="ptag">READ</span><span class="ptag">WRITE</span></td>
-          <td><strong>Read</strong> — to let you pick a profile photo or attach journal images from your gallery. <strong>Write</strong> — only when you save a generated report image to your gallery. Never accessed automatically.</td>
-        </tr>
-        <tr>
-          <td class="pname">Camera</td>
-          <td>Used to capture journal photos when you tap the camera option inside the journal screen, and for onboarding profile photo setup. Only activated on explicit user action.</td>
-        </tr>
-        <tr>
-          <td class="pname">Notifications</td>
-          <td>Used to schedule <strong>local</strong> reminders when you enable them in Settings &gt; Reminders. No server-side push notifications are sent. All scheduling is done on-device.</td>
-        </tr>
-        <tr>
-          <td class="pname">Internet</td>
-          <td>Used <strong>only</strong> for premium entitlement verification via RevenueCat and Google Play purchase validation. Not used to transmit your habit data, profile, or any app content.</td>
-        </tr>
-        <tr>
-          <td class="pname">Screen Capture<span class="ptag ptag-warn">SYSTEM</span></td>
-          <td>The app may restrict screenshots on specific screens (e.g. viewer and report screens in free mode) using the <code>expo-screen-capture</code> library. This does not request a user-visible system permission — it is a display flag only.</td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="perm-table">
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pname">Photos &amp; Media<span class="ptag">READ</span><span class="ptag">WRITE</span></td>
+            <td><strong>Read</strong> — to let you pick a profile photo or attach journal images from your gallery.
+              <strong>Write</strong> — only when you save a generated report image to your gallery. Never accessed
+              automatically.
+            </td>
+          </tr>
+          <tr>
+            <td class="pname">Camera</td>
+            <td>Used to capture journal photos when you tap the camera option inside the journal screen, and for
+              onboarding profile photo setup. Only activated on explicit user action.</td>
+          </tr>
+          <tr>
+            <td class="pname">Notifications</td>
+            <td>Used to schedule <strong>local</strong> reminders when you enable them in Settings &gt; Reminders. No
+              server-side push notifications are sent. All scheduling is done on-device.</td>
+          </tr>
+          <tr>
+            <td class="pname">Internet</td>
+            <td>Used <strong>only</strong> for premium entitlement verification via RevenueCat and Google Play purchase
+              validation. Not used to transmit your habit data, profile, or any app content.</td>
+          </tr>
+          <tr>
+            <td class="pname">Screen Capture<span class="ptag ptag-warn">SYSTEM</span></td>
+            <td>The app may restrict screenshots on specific screens (e.g. viewer and report screens in free mode) using
+              the <code>expo-screen-capture</code> library. This does not request a user-visible system permission — it
+              is a display flag only.</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <div class="notice-warn">
-      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-      <p><strong>Note on declared permissions:</strong> The Android manifest may declare <code>READ_MEDIA_AUDIO</code> as required by the Expo build toolchain. Ziel does <strong>not</strong> record, access, or transmit any microphone or audio data. This declaration does not grant access; no audio feature is implemented.</p>
-    </div>
-  </section>
+      <div class="notice-warn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+          <line x1="12" y1="9" x2="12" y2="13" />
+          <line x1="12" y1="17" x2="12.01" y2="17" />
+        </svg>
+        <p><strong>Note on declared permissions:</strong> The Android manifest may declare <code>READ_MEDIA_AUDIO</code>
+          as required by the Expo build toolchain. Ziel does <strong>not</strong> record, access, or transmit any
+          microphone or audio data. This declaration does not grant access; no audio feature is implemented.</p>
+      </div>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════
        APP ACCESS
        ═══════════════════════════════════════════════════════ -->
-  <section id="app-access" class="doc-section">
-    <div class="section-header">
-      <div class="section-icon">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+    <section id="app-access" class="doc-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M6 20v-2a6 6 0 0 1 12 0v2" />
+          </svg>
+        </div>
+        <h2 class="section-title">App Access</h2>
       </div>
-      <h2 class="section-title">App Access</h2>
-    </div>
 
-    <div class="two-col">
+      <div class="two-col">
+        <div class="block-card">
+          <h4>Login</h4>
+          <p>No login, account, or email address is required to use Ziel.</p>
+        </div>
+        <div class="block-card">
+          <h4>Test Account</h4>
+          <p>No test account is required. The app is fully usable without any credentials.</p>
+        </div>
+      </div>
+
       <div class="block-card">
-        <h4>Login</h4>
-        <p>No login, account, or email address is required to use Ziel.</p>
+        <h4>PIN Lock (Optional)</h4>
+        <p>You can enable an optional PIN lock via <strong>Settings › PIN Security</strong>. When enabled, the app locks
+          whenever it leaves the active state — pressing the power button or switching apps will lock the screen. Enter
+          your PIN to unlock. To disable: <strong>Settings › PIN Security › Disable PIN</strong>.</p>
+        <p>Your PIN is stored as a hash in secure on-device storage. It is never transmitted.</p>
       </div>
+
       <div class="block-card">
-        <h4>Test Account</h4>
-        <p>No test account is required. The app is fully usable without any credentials.</p>
+        <h4>Premium Access</h4>
+        <p>No account is needed for premium. Tap <strong>Profile › Upgrade</strong> to start a 7-day free trial via
+          Google Play (monthly subscription) or purchase lifetime access. Your entitlement is verified by RevenueCat
+          using your Google Play account.</p>
+        <p>Purchases can be restored at any time from the Profile screen → <strong>Restore purchases</strong>.
+          Subscription management (cancel, pause, etc.) is handled through your Google Play account.</p>
       </div>
-    </div>
 
-    <div class="block-card">
-      <h4>PIN Lock (Optional)</h4>
-      <p>You can enable an optional PIN lock via <strong>Settings › PIN Security</strong>. When enabled, the app locks whenever it leaves the active state — pressing the power button or switching apps will lock the screen. Enter your PIN to unlock. To disable: <strong>Settings › PIN Security › Disable PIN</strong>.</p>
-      <p>Your PIN is stored as a hash in secure on-device storage. It is never transmitted.</p>
-    </div>
-
-    <div class="block-card">
-      <h4>Premium Access</h4>
-      <p>No account is needed for premium. Tap <strong>Profile › Upgrade</strong> to start a 7-day free trial via Google Play (monthly subscription) or purchase lifetime access. Your entitlement is verified by RevenueCat using your Google Play account.</p>
-      <p>Purchases can be restored at any time from the Profile screen → <strong>Restore purchases</strong>. Subscription management (cancel, pause, etc.) is handled through your Google Play account.</p>
-    </div>
-
-    <div class="badge-row">
-      <span class="badge">
-        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        No account required
-      </span>
-      <span class="badge">
-        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        Free mode always available
-      </span>
-      <span class="badge">
-        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-        Google Play billing
-      </span>
-      <span class="badge">
-        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-        RevenueCat powered
-      </span>
-    </div>
-  </section>
-  <!-- ═══════════════════════════════════════════════════════
+      <div class="badge-row">
+        <span class="badge">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          No account required
+        </span>
+        <span class="badge">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          Free mode always available
+        </span>
+        <span class="badge">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="1" y="4" width="22" height="16" rx="2" />
+            <line x1="1" y1="10" x2="23" y2="10" />
+          </svg>
+          Google Play billing
+        </span>
+        <span class="badge">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path
+              d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+          </svg>
+          RevenueCat powered
+        </span>
+      </div>
+    </section>
+    <!-- ═══════════════════════════════════════════════════════
        TERMS OF SERVICE
        ═══════════════════════════════════════════════════════ -->
-  <section id="terms" class="doc-section">
-    <div class="section-header">
-      <div class="section-icon">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+    <section id="terms" class="doc-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+          </svg>
+        </div>
+        <h2 class="section-title">Terms of Service</h2>
       </div>
-      <h2 class="section-title">Terms of Service</h2>
-    </div>
 
-    <div class="block-card">
-      <h4>1. Acceptance of Terms</h4>
-      <p>By downloading, installing, or using Ziel, you agree to be bound by these Terms of Service. If you do not agree, do not use the app.</p>
-    </div>
+      <div class="block-card">
+        <h4>1. Acceptance of Terms</h4>
+        <p>By downloading, installing, or using Ziel, you agree to be bound by these Terms of Service. If you do not
+          agree, do not use the app.</p>
+      </div>
 
-    <div class="block-card">
-      <h4>2. License to Use</h4>
-      <p>We grant you a personal, non-transferable, non-exclusive license to use Ziel on your device for personal, non-commercial purposes. You may not copy, modify, distribute, reverse-engineer, or create derivative works of the app or its assets.</p>
-    </div>
+      <div class="block-card">
+        <h4>2. License to Use</h4>
+        <p>We grant you a personal, non-transferable, non-exclusive license to use Ziel on your device for personal,
+          non-commercial purposes. You may not copy, modify, distribute, reverse-engineer, or create derivative works of
+          the app or its assets.</p>
+      </div>
 
-    <div class="block-card">
-      <h4>3. Subscriptions &amp; In-App Purchases</h4>
-      <p>Ziel offers optional premium features via a <strong>monthly subscription</strong> (with a 7-day free trial) or a <strong>one-time lifetime purchase</strong>. By choosing to upgrade, you agree to the pricing terms presented on the purchase screen.</p>
-      <p><strong>Free Trial:</strong> The monthly subscription includes a 7-day free trial. If you do not cancel before the trial ends, your Google Play account will be automatically charged the monthly price. You can check the trial end date in your Google Play subscription settings.</p>
-      <p><strong>Billing &amp; Cancellation:</strong> All billing and subscription management is handled by Google Play. You can cancel at any time via your Google Play account settings. Cancellation takes effect at the end of the current billing period — you retain access until then.</p>
-      <p><strong>Refunds:</strong> Refund requests are handled by Google Play in accordance with their refund policy.</p>
-      <p><strong>Restoration:</strong> If you reinstall the app or switch devices, tap <em>Restore purchases</em> on the Profile screen to reactivate your premium access.</p>
-    </div>
+      <div class="block-card">
+        <h4>3. Subscriptions &amp; In-App Purchases</h4>
+        <p>Ziel offers optional premium features via a <strong>monthly subscription</strong> (with a 7-day free trial)
+          or a <strong>one-time lifetime purchase</strong>. By choosing to upgrade, you agree to the pricing terms
+          presented on the purchase screen.</p>
+        <p><strong>Free Trial:</strong> The monthly subscription includes a 7-day free trial. If you do not cancel
+          before the trial ends, your Google Play account will be automatically charged the monthly price. You can check
+          the trial end date in your Google Play subscription settings.</p>
+        <p><strong>Billing &amp; Cancellation:</strong> All billing and subscription management is handled by Google
+          Play. You can cancel at any time via your Google Play account settings. Cancellation takes effect at the end
+          of the current billing period — you retain access until then.</p>
+        <p><strong>Refunds:</strong> Refund requests are handled by Google Play in accordance with their refund policy.
+        </p>
+        <p><strong>Restoration:</strong> If you reinstall the app or switch devices, tap <em>Restore purchases</em> on
+          the Profile screen to reactivate your premium access.</p>
+      </div>
 
-    <div class="block-card">
-      <h4>4. User Content</h4>
-      <p>All content you create within Ziel (habits, tasks, journal entries, photos) remains yours. Because data is stored locally, you are responsible for maintaining backups if you wish to preserve your data. We have no access to your content and cannot recover it if lost.</p>
-    </div>
+      <div class="block-card">
+        <h4>4. User Content</h4>
+        <p>All content you create within Ziel (habits, tasks, journal entries, photos) remains yours. Because data is
+          stored locally, you are responsible for maintaining backups if you wish to preserve your data. We have no
+          access to your content and cannot recover it if lost.</p>
+      </div>
 
-    <div class="block-card">
-      <h4>5. Acceptable Use</h4>
-      <p>You agree not to use Ziel for any unlawful purpose or in any way that could harm the app, its infrastructure, or other users. Attempting to circumvent license verification mechanisms or premium access controls is prohibited.</p>
-    </div>
+      <div class="block-card">
+        <h4>5. Acceptable Use</h4>
+        <p>You agree not to use Ziel for any unlawful purpose or in any way that could harm the app, its infrastructure,
+          or other users. Attempting to circumvent license verification mechanisms or premium access controls is
+          prohibited.</p>
+      </div>
 
-    <div class="block-card">
-      <h4>6. Disclaimer of Warranties</h4>
-      <p>Ziel is provided <strong>"as is"</strong> without any warranty, express or implied. We do not guarantee that the app will be uninterrupted, error-free, or that any data will be preserved in the event of a device failure or app reinstall.</p>
-    </div>
+      <div class="block-card">
+        <h4>6. Disclaimer of Warranties</h4>
+        <p>Ziel is provided <strong>"as is"</strong> without any warranty, express or implied. We do not guarantee that
+          the app will be uninterrupted, error-free, or that any data will be preserved in the event of a device failure
+          or app reinstall.</p>
+      </div>
 
-    <div class="block-card">
-      <h4>7. Limitation of Liability</h4>
-      <p>To the maximum extent permitted by applicable law, we shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of or inability to use the app, including any loss of data.</p>
-    </div>
+      <div class="block-card">
+        <h4>7. Limitation of Liability</h4>
+        <p>To the maximum extent permitted by applicable law, we shall not be liable for any indirect, incidental,
+          special, or consequential damages arising from your use of or inability to use the app, including any loss of
+          data.</p>
+      </div>
 
-    <div class="block-card">
-      <h4>8. Governing Law</h4>
-      <p>These terms are governed by applicable laws. Any disputes shall be resolved in the jurisdiction where the developer is based.</p>
-    </div>
+      <div class="block-card">
+        <h4>8. Governing Law</h4>
+        <p>These terms are governed by applicable laws. Any disputes shall be resolved in the jurisdiction where the
+          developer is based.</p>
+      </div>
 
-    <div class="block-card">
-      <h4>9. Changes to These Terms</h4>
-      <p>We may update these Terms from time to time. We will notify you of material changes by updating the effective date at the top of this page. Continued use after changes constitutes acceptance.</p>
-    </div>
-  </section>
+      <div class="block-card">
+        <h4>9. Changes to These Terms</h4>
+        <p>We may update these Terms from time to time. We will notify you of material changes by updating the effective
+          date at the top of this page. Continued use after changes constitutes acceptance.</p>
+      </div>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════════
        CONTACT
        ═══════════════════════════════════════════════════════ -->
-  <section id="contact" class="doc-section">
-    <div class="section-header">
-      <div class="section-icon">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    <section id="contact" class="doc-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </div>
+        <h2 class="section-title">Contact</h2>
       </div>
-      <h2 class="section-title">Contact</h2>
-    </div>
 
-    <div class="block-card">
-      <h4>Questions or Concerns?</h4>
-      <p>If you have any questions about this Privacy Policy, the Terms of Service, or how your data is handled, reach out directly:</p>
-      <a href="mailto:nk2systems@gmail.com" class="contact-email">
-        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        nk2systems@gmail.com
-      </a>
-    </div>
-  </section>
+      <div class="block-card">
+        <h4>Questions or Concerns?</h4>
+        <p>If you have any questions about this Privacy Policy, the Terms of Service, or how your data is handled, reach
+          out directly:</p>
+        <a href="mailto:nk2systems@gmail.com" class="contact-email">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          nk2systems@gmail.com
+        </a>
+      </div>
+    </section>
 
-  <div class="divider"></div>
-  <p style="font-size:12px;color:var(--muted2);text-align:center;">
-    Ziel: No Excuse System · com.nk2systems.ziel · Version 1.0.1<br>
-    Developer: NK2 Systems · Effective May 3, 2026
-  </p>
+    <div class="divider"></div>
+    <p style="font-size:12px;color:var(--muted2);text-align:center;">
+      Ziel: No Excuse System · com.nk2systems.ziel · Version 1.0.1<br>
+      Developer: NK2 Systems · Effective May 3, 2026
+    </p>
 
-</main>
+  </main>
 
-<script>
-// Sidebar active link on scroll
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(l => l.classList.remove('active'));
-      const link = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-      if (link) link.classList.add('active');
-    }
-  });
-}, { rootMargin: '-20% 0px -70% 0px' });
-sections.forEach(s => observer.observe(s));
-</script>
+  <script>
+    // Sidebar active link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const link = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+          if (link) link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
 </body>
+
 </html>
